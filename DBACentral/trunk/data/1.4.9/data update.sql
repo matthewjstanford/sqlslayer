@@ -1,0 +1,33 @@
+USE DBACentral
+
+PRINT('Inserting seed data')
+
+INSERT INTO [ref].[SQLServer_IsolationLevels] ([IsolationLevel])
+VALUES ('Read Uncommitted (1)'),('Read Committed (2)'),('repeatable read (3)'),('Serializable (4)'),('Snapshot (5)')
+
+INSERT INTO [ref].[SQLServer_RunStatus] ([RunStatus])
+VALUES ('runnable'),('suspended'),('sleeping'),('')
+
+INSERT INTO [ref].[SQLServer_LockModes] ([LockMode],[LockName],[Description])
+VALUES (NULL,'Nothing','Placeholder for no lock')
+,('S','Shared','Used for read operations that do not change or update data, such as a SELECT statement.')
+,('U','Update','Used on resources that can be updated. Prevents a common form of deadlock that occurs when multiple sessions are reading, locking, and potentially updating resources later.')
+,('X','Exclusive','Used for data-modification operations, such as INSERT, UPDATE, or DELETE. Ensures that multiple updates cannot be made to the same resource at the same time.')
+,('IS','Intent Shared','Protects requested or acquired shared locks on some (but not all) resources lower in the hierarchy.')
+,('IX','Intent Exclusive','Protects requested or acquired exclusive locks on some (but not all) resources lower in the hierarchy. IX is a superset of IS, and it also protects requesting shared locks on lower level resources.')
+,('SIX','Shared with Intent Exclusive','Protects requested or acquired shared locks on all resources lower in the hierarchy and intent exclusive locks on some (but not all) of the lower level resources. Concurrent IS locks at the top-level resource are allowed. For example, acquiring a SIX lock on a table also acquires intent exclusive locks on the pages being modified and exclusive locks on the modified rows. There can be only one SIX lock per resource at one time, preventing updates to the resource made by other transactions, although other transactions can read resources lower in the hierarchy by obtaining IS locks at the table level.')
+,('IU','Intent Update','Protects requested or acquired update locks on all resources lower in the hierachy. IU locks are used only on page resources. IU locks are converted to IX locks if an update operation takes place.')
+,('SIU','Shared Intent Update','A combination of S and IU locks, as a result of acquiring these locks separately and simultaneously holding both locks. For example, a transaction executes a query with the PAGLOCK hint and then executes an update operation. The query with the PAGLOCK hint acquires the S lock, and the update operation acquires the IU lock.')
+,('UIX','Update Intent Exclusive','A combination of U and IX locks, as a result of acquiring these locks separately and simultaneously holding both locks.')
+,('Sch-M','Schema Modification','Used when an operation dependent on the schema of a table is executing. The types of schema locks are: schema modification (Sch-M) and schema stability (Sch-S).')
+,('Sch-S','Schema Stability','Used when an operation dependent on the schema of a table is executing. The types of schema locks are: schema modification (Sch-M) and schema stability (Sch-S).')
+,('BU','Bulk Update','Used when bulk copying data into a table and the TABLOCK hint is specified.')
+,('RangeS_S','Shared Range','Shared Key-Range and Shared Resource lock. Indicates serializable range scan.')
+,('RangeS_U','Shared & Update Range','Shared Key-Range and Update Resource lock. Indicates serializable update scan.')
+,('RangeI_N','Insert & Null Range','Insert Key-Range and Null Resource lock. Used to test ranges before inserting a new key into an index.')
+,('RangeI_S','I_N/S Range Conversion','Key-Range Conversion lock. Created by an overlap of RangeI_N and S locks.')
+,('RangeI_U','I_N/U Range Conversion','Key-Range Conversion lock created by an overlap of RangeI_N and U locks.')
+,('RangeI_X','I_N/X Range Conversion','Key-Range Conversion lock created by an overlap of RangeI_N and X locks.')
+,('RangeX_S','I_N/S_S Range Conversion','Key-Range Conversion lock created by an overlap of RangeI_N and RangeS_S locks.')
+,('RangeX_U','I_N/S_U Range Conversion','Key-Range Conversion lock created by an overlap of RangeI_N and RangeS_U locks.')
+,('RangeX_X','I_N/X Range Conversion','Exclusive Key-Range and Exclusive Resource lock. This is a conversion lock used when updating a key in a range.')

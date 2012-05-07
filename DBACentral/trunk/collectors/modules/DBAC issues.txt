@@ -1,0 +1,7 @@
+DBAC collection issues
+* Logging
+* Fragmentation of scripts/consistency
+* scheduling
+* installation/upgrading
+* dependency on DBAC version and admin version
+* configuration

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "SpaceUsed Reports", "SpaceUsed Reports\SpaceUsed Reports.rptproj", "{79DBF390-F5A5-413D-937A-860A16F2CD39}"
+EndProject
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Deadlocks", "Deadlocks\Deadlocks.rptproj", "{78BEFC4A-0A21-488F-BEE4-BACA3E4FBC4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79DBF390-F5A5-413D-937A-860A16F2CD39}.Debug|Default.ActiveCfg = Debug
+		{79DBF390-F5A5-413D-937A-860A16F2CD39}.Debug|Default.Build.0 = DebugLocal
+		{79DBF390-F5A5-413D-937A-860A16F2CD39}.Debug|Default.Deploy.0 = DebugLocal
+		{79DBF390-F5A5-413D-937A-860A16F2CD39}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{79DBF390-F5A5-413D-937A-860A16F2CD39}.DebugLocal|Default.Build.0 = DebugLocal
+		{79DBF390-F5A5-413D-937A-860A16F2CD39}.Release|Default.ActiveCfg = Release
+		{79DBF390-F5A5-413D-937A-860A16F2CD39}.Release|Default.Build.0 = Release
+		{79DBF390-F5A5-413D-937A-860A16F2CD39}.Release|Default.Deploy.0 = Release
+		{78BEFC4A-0A21-488F-BEE4-BACA3E4FBC4C}.Debug|Default.ActiveCfg = DebugLocal
+		{78BEFC4A-0A21-488F-BEE4-BACA3E4FBC4C}.Debug|Default.Build.0 = DebugLocal
+		{78BEFC4A-0A21-488F-BEE4-BACA3E4FBC4C}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{78BEFC4A-0A21-488F-BEE4-BACA3E4FBC4C}.DebugLocal|Default.Build.0 = DebugLocal
+		{78BEFC4A-0A21-488F-BEE4-BACA3E4FBC4C}.Release|Default.ActiveCfg = Release
+		{78BEFC4A-0A21-488F-BEE4-BACA3E4FBC4C}.Release|Default.Build.0 = Release
+		{78BEFC4A-0A21-488F-BEE4-BACA3E4FBC4C}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

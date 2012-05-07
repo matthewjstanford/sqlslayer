@@ -1,0 +1,15 @@
+DBACentral will have a three part number for its version separated by dots (.).  
+
+Example: 1.2.3
+Where 1.0.0 was the fully scripted out DBACentral database
+
+And 1.1.0 means that there was a structural change.  All difference/delta scripts must be included
+to increment the database from 1.0.0 to 1.1.0.  1.2.0 will require all of the difference scripts
+from 1.1.0 to 1.2.0.
+
+And 1.0.1 means that there was a non-structural change to the database.  This might include a 
+backwards compatible change to one of the collector scripts or a data change.  No delta scripts required.
+
+
+The version will be stamped on the database in the form of an extended property.  All difference
+scripts should interrogate the extended property and only apply if the version is as expected.
